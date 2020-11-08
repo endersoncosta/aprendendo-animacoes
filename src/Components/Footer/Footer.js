@@ -1,13 +1,16 @@
 import React from "react";
 import { Container, FooterLink } from "./style";
+import { useHistory } from "react-router-dom";
+
+
 
 function Footer({color}) {
+  const history = useHistory();
+
   return (
       <Container color={color}>
-        <FooterLink color={color}>Simples 1</FooterLink>
-        <FooterLink color={color}>Simples 2</FooterLink>
-        <FooterLink color={color}>Complexa 1</FooterLink>
-        <FooterLink color={color}>Complexa 2</FooterLink>
+        <FooterLink color={color} onClick={() => history.push("/1")}>Simples 1</FooterLink>
+        <FooterLink color={color} onClick={() => history.push("/2")}>Complexa</FooterLink>
       </Container>
   );
 }

@@ -25,6 +25,6 @@ export const FooterLink = styled.p`
 `;
 
 const invertColor = (color) => {
-  if (color === "color1" || color === "color2") return "color4";
+  if (color === "color1" || color === "color2" || color === "color3") return "color4";
   else return "color1";
 };

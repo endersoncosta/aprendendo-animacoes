@@ -9,7 +9,7 @@ import {
   Botao,
 } from "./style";
 
-function Home() {
+function Simples() {
   const [etapa, setEtapa] = useState(3);
 
   const previous = useCallback(() => {
@@ -55,9 +55,9 @@ function Home() {
         <Botao onClick={next}>Avançar</Botao>
       </ContainerBotoes>
 
-      <Footer color="color4"></Footer>
+      <Footer color="color3"></Footer>
     </Page>
   );
 }
 
-export default Home;
+export default Simples;

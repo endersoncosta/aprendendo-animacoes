@@ -3,15 +3,15 @@ import styled from "styled-components";
 export const Page = styled.div`
   height: 100vh;
   width: 100vw;
-  background-color: var(--color3);
-  color: var(--gray1);
+  background-color: var(--color4);
+  color: var(--color1);
   padding: 1% 0;
   position: relative;
 `;
 
 export const Title = styled.h1`
   font-size: 48px;
-  color: var(--color4);
+  color: var(--color1);
 
   text-align: center;
 `;
@@ -91,13 +91,13 @@ export const Botao = styled.button`
   border-radius: 5px;
   margin: 0 15px;
   color: var(--color4);
-  background-color: var(--color2);
+  background-color: var(--color3);
   transition: all 0.2s ease;
   cursor: pointer;
 
   &:hover {
-    background-color: var(--color4);
-    color: var(--color2);
+    background-color: var(--color1);
+    color: var(--color4);
   }
 `;
 

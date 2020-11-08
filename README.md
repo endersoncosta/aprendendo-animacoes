@@ -7,7 +7,7 @@ Este projeto tem o objetivo de aumentar o aprendizado de animações e transiç�
 - [X] Transição simples do css
 - [X] Animação simples apenas em css
 - [ ] Transição entre páginas do router dom
-- [ ] Animação usando libs de animação
+- [X] Animação usando libs de animação
 
 
 ## Recursos utilizados
