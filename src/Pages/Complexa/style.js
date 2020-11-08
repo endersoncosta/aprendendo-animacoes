@@ -27,11 +27,12 @@ export const ContainerAnimacao = styled.div`
   justify-self: center;
   position: relative;
   width: 100%;
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 `;
 
 export const ContainerBotoes = styled.div`
+  margin-top: ${props=> props.marginTop || 0}px;
   width: 100;
   text-align: center;
 `;
