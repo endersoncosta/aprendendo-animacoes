@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import Footer from "../../Components/Footer/Footer";
-import { Page, Title, ContainerAnimacao, Animacao, ContainerBotoes, Botao } from "./style";
+import {
+  Page,
+  Title,
+  ContainerAnimacao,
+  Animacao,
+  ContainerBotoes,
+  Botao,
+} from "./style";
 
 function Home() {
+  const [etapa, setEtapa] = useState(3);
+
+  const previous = useCallback(() => {
+    if (etapa <= 0) setEtapa(3);
+    else setEtapa(etapa-1);
+  }, [etapa]);
+
+  const next = useCallback(() => {
+    console.log(etapa)
+
+    if (etapa >= 3) setEtapa(0);
+    else setEtapa(etapa+1);
+  }, [etapa]);
+
   return (
     <Page>
       <Title>Animação simples em css</Title>
@@ -15,7 +36,7 @@ function Home() {
           //? stroke é a cor do traço, da "borda"
           //? stroke-width é a grossura do traço
         }
-        <Animacao>
+        <Animacao etapa={etapa}>
           <svg className="rodando" viewBox="22 22 44 44">
             <circle
               className="crescendo"
@@ -30,8 +51,8 @@ function Home() {
       </ContainerAnimacao>
 
       <ContainerBotoes>
-        <Botao>Voltar</Botao>
-        <Botao>Avançar</Botao>
+        <Botao onClick={previous}>Voltar</Botao>
+        <Botao onClick={next}>Avançar</Botao>
       </ContainerBotoes>
 
       <Footer color="color4"></Footer>

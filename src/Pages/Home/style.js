@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Page = styled.div`
   height: 100vh;
   width: 100vw;
-  background-color: #f0e3ff;
+  background-color: var(--color3);
   color: var(--gray1);
   padding: 1% 0;
   position: relative;
@@ -38,17 +38,12 @@ export const Animacao = styled.div`
   height: 100px;
 
   & circle {
-    ${(props) => (props.desenhar ? "stroke: #f94444" : "")}
+    ${(props) => (props.etapa > 0 ? "stroke: #f94444" : "")}
   }
-
-  & .rodando {
-    ${(props) =>
-      props.ativarRodando ? "animation: rodando 1.4s linear infinite;" : ""}
-  }
-
+  
   & .crescendo {
     ${(props) =>
-      props.ativarCrescendo
+      props.etapa > 1
         ? `
             animation: crescendo 1.4s ease-in-out infinite;
             stroke-dasharray: 80px, 200px;
@@ -56,6 +51,12 @@ export const Animacao = styled.div`
           `
         : ""}
   }
+
+  & .rodando {
+    ${(props) =>
+      props.etapa > 2 ? "animation: rodando 1.4s linear infinite;" : ""}
+  }
+
 
   @keyframes rodando {
     to {
@@ -92,6 +93,7 @@ export const Botao = styled.button`
   color: var(--color4);
   background-color: var(--color2);
   transition: all 0.2s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: var(--color4);
