@@ -4,8 +4,8 @@ Este projeto tem o objetivo de aumentar o aprendizado de animações e transiç�
 
 ## Objetivos
 
-- [ ] Transição simples do css
-- [ ] Animação simples apenas em css
+- [X] Transição simples do css
+- [X] Animação simples apenas em css
 - [ ] Transição entre páginas do router dom
 - [ ] Animação usando libs de animação
 
@@ -21,5 +21,5 @@ Este projeto tem o objetivo de aumentar o aprendizado de animações e transiç�
 
 ## Links e referências
 
-- [Paleta de cores](https://colorhunt.co/palette/165764)
+- [Paleta de cores](https://colorhunt.co/palette/163855)
 - [Lootie Files](https://lottiefiles.com)
